@@ -1,0 +1,27 @@
+.home_box {
+  display: block;
+  margin-top: 30dvh;
+  margin-left: 10dvw;
+}
+
+.home_title {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 60px;
+}
+
+.home_link {
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  width: 274px;
+  height: 44px;
+  padding: 12px 59px 12px 59px;
+  border-radius: 12px;
+  background-color: #3470ff;
+  color: aliceblue;
+  transition: 0.5ms;
+}
+
+.home_link:hover {
+  background-color: #0b44cd;
+}

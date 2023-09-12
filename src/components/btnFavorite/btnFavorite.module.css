@@ -1,0 +1,13 @@
+.btnFavorite {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+  width: 15px;
+  height: 15px;
+  transition: 0.2s;
+}
+
+.btnFavorite:hover {
+  transform: scale(1.1);
+}
