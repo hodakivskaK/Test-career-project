@@ -24,6 +24,7 @@
 
 .catalog__card:hover .catalog__btn {
   transform: scale(1.03);
+  background-color: #0b44cd;
 }
 
 .catalog__btn {
