@@ -37,11 +37,15 @@
   border-radius: 12px;
   background-color: #3470ff;
   color: aliceblue;
+
   transition: 0.3s;
 }
 
-.catalog__btn:hover {
+.catalog__btn:hover,
+.catalog__btn:focus,
+.catalog__btn:focus-within {
   background-color: #0b44cd;
+  border: none;
 }
 
 .catalog__decrBox {

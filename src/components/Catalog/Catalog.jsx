@@ -1,26 +1,58 @@
 
 
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import ModalCard from 'components/ModalCard/ModalCard';
 // import btnFavorite from 'components/btnFavorite/btnFavorite';
 import BtnFavorite from '../btnFavorite/btnFavorite'
 import s from './Catalog.module.css'
 
 export default function Catalog({catalog}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentCar, setIsCurrentCar] = useState([]);
 
-  
+  const openModal = (car) => {
+    setIsCurrentCar(car)
+    setIsOpen(true);
+    document.body.classList.add('modal-open')
+  };
 
+  const closeModal = () => {
+    setIsOpen(false);
+    setIsCurrentCar([]);
+    document.body.classList.remove('modal-open');
+    console.log(currentCar)
+  };
+
+  const handleEscapeKey = (event) => {
+    console.log(event)
+    if (event.key === 'Escape' && isOpen) {
+      closeModal();
+    }
+  };
+
+  const handleBackdropClick = (event) => {
+    if (event.target.classList.contains('modal-backdrop')) {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      window.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isOpen]);
 
         
   return (
     <div>
-      
-      <h1>Catalog</h1>
-      
       <div className={s.catalog__container}>
         {catalog.map(car => {
-        const modifieDescr = [car.address.split(', '), car.rentalCompany, car.type, car.model, car.mileage, car.functionalities[0]];
+        const modifieDescr = [car.address.split(', '), car.rentalCompany, car.type, car.model, car.id, car.functionalities[0]];
           
-        return <div key={car.id} className={s.catalog__card}>
+        return <div key={car.id} className={s.catalog__card }>
           
           <img src={car.img} alt={car.make} className={s.catalog__img} />
               <BtnFavorite/>
@@ -35,7 +67,8 @@ export default function Catalog({catalog}) {
             <p className={s.catalog__decrSecondary}>{modifieDescr.slice(1).join(" | ")}</p> 
              </div>
               
-              <button className={s.catalog__btn} type='button'>Learn more</button>
+          <button className={s.catalog__btn} type='button' onClick={() =>openModal(car)}>Learn more</button>
+          <ModalCard car={currentCar} isOpen={isOpen} closeModal={closeModal} />
         </div>
         
       })}

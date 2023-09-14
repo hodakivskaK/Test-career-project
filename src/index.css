@@ -1,23 +1,17 @@
 @import-normalize;
 
 body {
+  box-sizing: border-box;
+  position: relative;
   background-color: rgb(255, 255, 255);
-  margin: 0 128px;
-  font-family: -apple-system, 'Manrope', sans-serif;
+  margin: 60px 128px;
+  font-family: -apple-system, 'Manrope', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  height: 15px;
-  width: 100%;
-  background-color: rgba(240, 248, 255, 0.645);
+body.modal-open {
+  overflow: hidden;
 }
 
 p,
@@ -36,4 +30,9 @@ code {
 button:hover,
 button:focus {
   cursor: pointer;
+  border: none;
+}
+
+section {
+  margin: 120px 0 60px 0;
 }

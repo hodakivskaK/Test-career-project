@@ -1,29 +1,28 @@
 
 
 import Select from 'react-select';
+
 import brands from 'data/brands';
 import price from 'data/price';
-import { brandsStyles, priceStyles  } from './inputStyles';
+
+import { brandsStyles, priceStyles } from './inputStyles';
 import s from './Filter.module.css'
 
 export default function Filter() {
   return (
-    <div>
-      <h1>Filter</h1>
-
+    <div >
       <form className={s.filter__form}>
       
         <label className={s.filter__label}>
         <p>Car brand</p> 
       <Select
-        defaultMenuIsOpen="Enter the text"
-        defaultValue="Enter the text"
+    
         className="basic-single"
         classNamePrefix="select"
         name="Car brand"
         options={brands}
         styles={brandsStyles}
-        autoFocus="false"
+    
       />
       </label>
         
