@@ -56,7 +56,7 @@ export default function ModalCard({car, isOpen, closeModal}) {
                 </div>
             </div>
 
-            <button type="button" className={s.modalCard__rentalBtn}>Rental car</button>
+            <a href="tel:+380730000000" className={s.modalCard__rentalBtn}>Rental car</a>
           </div>
         </div>
       )}

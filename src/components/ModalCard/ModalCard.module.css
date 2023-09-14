@@ -140,7 +140,8 @@
 }
 
 .modalCard__rentalBtn {
-  width: 168px;
+  box-sizing: border-box;
+  text-decoration: none;
   height: 44px;
   padding: 12px 50px 12px 50px;
   border-radius: 12px;
@@ -148,6 +149,10 @@
   border: none;
   background-color: #3470ff;
   transition: 0.3s;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(20 / 14);
 }
 
 .modalCard__rentalBtn:hover,
