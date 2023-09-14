@@ -4,7 +4,6 @@ body {
   box-sizing: border-box;
   position: relative;
   background-color: rgb(255, 255, 255);
-  margin: 60px 128px;
   font-family: -apple-system, 'Manrope', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,5 +33,5 @@ button:focus {
 }
 
 section {
-  margin: 120px 0 60px 0;
+  margin: 120px 0 150px 0;
 }

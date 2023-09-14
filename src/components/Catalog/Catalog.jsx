@@ -3,14 +3,16 @@
 import { useState, useEffect } from 'react';
 
 import ModalCard from 'components/ModalCard/ModalCard';
-// import btnFavorite from 'components/btnFavorite/btnFavorite';
 import BtnFavorite from '../btnFavorite/btnFavorite'
+import LoadMore from 'components/LoadMore/LoadMore';
+
 import s from './Catalog.module.css'
 
-export default function Catalog({catalog}) {
+export default function Catalog({onClick, showLoadMoreBtn, catalog}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCar, setIsCurrentCar] = useState([]);
-
+  
+  
   const openModal = (car) => {
     setIsCurrentCar(car)
     setIsOpen(true);
@@ -72,6 +74,8 @@ export default function Catalog({catalog}) {
         </div>
         
       })}
+
+        {showLoadMoreBtn && <LoadMore onClick={onClick} />}
       </div>
     </div>
   );

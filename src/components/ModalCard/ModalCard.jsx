@@ -8,7 +8,7 @@ export default function ModalCard({car, isOpen, closeModal}) {
 
   if (isOpen) {
     conditionsOptions = car.rentalConditions.split('\n');
-    modifieDescr = [car.address.split(', '), `Id: ${car.id}`, `Year: ${car.year}`, `Type: ${car.type}`, `Fuel Consumption: ${car.fuelConsumption}`, `Engine Size: ${car.engineSize}`];
+    modifieDescr = [...car.address.split(', '), `Id: ${car.id}`, `Year: ${car.year}`, `Type: ${car.type}`, `Fuel Consumption: ${car.fuelConsumption}`, `Engine Size: ${car.engineSize}`];
     console.log(modifieDescr)
   }
   

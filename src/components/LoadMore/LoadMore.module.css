@@ -1,0 +1,25 @@
+.loadMore__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.loadMore__btn {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(24 / 16);
+
+  color: #3470ff;
+  transition: 0.3s;
+
+  padding: 10px;
+  border: 0;
+  background-color: transparent;
+}
+
+.loadMore__btn:hover,
+.loadMore__btn:focus {
+  color: #0b44cd;
+}

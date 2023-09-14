@@ -11,7 +11,10 @@
 }
 
 .AppBar__wrapper {
-  padding: 15px 128px;
+  box-sizing: border-box;
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 15px 16px;
 
   display: flex;
   align-items: center;

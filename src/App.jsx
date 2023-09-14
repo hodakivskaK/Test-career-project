@@ -1,17 +1,16 @@
 import { Route, Routes  } from "react-router-dom";
-import { lazy, Suspense  } from 'react'
-
-
+import { lazy  } from 'react'
+import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
 const FavoritesPage = lazy(() => import('./pages/FavoritiesPage/FavoritesPage'));
-// const Loader = lazy(() => import('./components/Loader'));
+
 
 
 export const App = () => {
   return (
-    <Suspense fallback={<div>"ded"</div>}>
       <Routes>
+         <Route path="/" element={<SharedLayout />}>
           <Route path="/" element={<HomePage />} />
       
           <Route path="/catalog" element={<CatalogPage /> } />
@@ -20,15 +19,8 @@ export const App = () => {
             path="/favorite"
             element={<FavoritesPage />}
           />
-        
-        </Routes>
-    </Suspense>
+        </Route>
+      </Routes>
   );
     
 }
-
-
- // isRefreshing ? (
-  //   <b>Refreshing user...</b>
-  //    ) :
-      // (
