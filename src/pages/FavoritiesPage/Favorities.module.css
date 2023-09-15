@@ -1,0 +1,14 @@
+.favoritesPage_empty {
+  font-size: 20px;
+  color: #3470ff;
+}
+
+.favoritesPage__link {
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.favoritesPage__link:hover {
+  color: #0b44cd;
+}

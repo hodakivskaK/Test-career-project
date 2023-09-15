@@ -8,10 +8,11 @@ import LoadMore from 'components/LoadMore/LoadMore';
 
 import s from './Catalog.module.css'
 
-export default function Catalog({onClick, showLoadMoreBtn, catalog}) {
+export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite, favoriteIcon}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCar, setIsCurrentCar] = useState([]);
-  
+
+  const [favoriteIcona, setFavoriteIcona] = useState(false);
   
   const openModal = (car) => {
     setIsCurrentCar(car)
@@ -27,7 +28,6 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog}) {
   };
 
   const handleEscapeKey = (event) => {
-    console.log(event)
     if (event.key === 'Escape' && isOpen) {
       closeModal();
     }
@@ -57,7 +57,7 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog}) {
         return <div key={car.id} className={s.catalog__card }>
           
           <img src={car.img} alt={car.make} className={s.catalog__img} />
-              <BtnFavorite/>
+          <BtnFavorite car={car} addFavorite={addFavorite} favoriteIcon={favoriteIcon} />
               <div className={s.catalog__decrBox}>
                 <p className={s.catalog__decr}>{car.make} 
                 <span className={s.catalog__decrAccent}> {car.model}, </span>
