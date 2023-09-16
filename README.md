@@ -9,4 +9,4 @@ application consists of 3 pages:
    kilometers the car has covered during its operation (mileage).
 3. Favorite page with have been added to the user's favorite
 
-Technologies Frontend: React, HTML, CSS, JavaScript
+Technologies which used: React, HTML, CSS, JavaScript
