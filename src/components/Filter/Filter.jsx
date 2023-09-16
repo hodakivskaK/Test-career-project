@@ -1,5 +1,3 @@
-
-
 import Select from 'react-select';
 
 import brands from 'data/brands';

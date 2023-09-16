@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 
 import ModalCard from 'components/ModalCard/ModalCard';
@@ -11,8 +9,6 @@ import s from './Catalog.module.css'
 export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite, favorites}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCar, setIsCurrentCar] = useState([]);
-
-    // const [favoriteIcon, setFavoriteIcon] = useState(false);
   
   const openModal = (car) => {
     setIsCurrentCar(car)
@@ -24,22 +20,20 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite
     setIsOpen(false);
     setIsCurrentCar([]);
     document.body.classList.remove('modal-open');
-    console.log(currentCar)
   };
 
-  const handleEscapeKey = (event) => {
-    if (event.key === 'Escape' && isOpen) {
-      closeModal();
-    }
-  };
-
-  const handleBackdropClick = (event) => {
-    if (event.target.classList.contains('modal-backdrop')) {
+  const onClickClose = e => {
+    if (e.currentTarget === e.target) {
       closeModal();
     }
   };
 
   useEffect(() => {
+      const handleEscapeKey = (event) => {
+    if (event.key === 'Escape' && isOpen) {
+      closeModal();
+    }
+  }
     window.addEventListener('keydown', handleEscapeKey);
 
     return () => {
@@ -70,7 +64,7 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite
              </div>
               
           <button className={s.catalog__btn} type='button' onClick={() =>openModal(car)}>Learn more</button>
-          <ModalCard car={currentCar} isOpen={isOpen} closeModal={closeModal} />
+          <ModalCard car={currentCar} isOpen={isOpen} closeModal={onClickClose} />
         </div>
         
       })}

@@ -21,8 +21,8 @@ export default function BtnFavorite({ car, addFavorite, favorites }) {
     return (
         <div className={s.btnFavorite} onClick={() =>  addFavorite(car)} >
             {favoriteIcon ?
-                <img src={likedFavorite} alt="favorite" /> :
-                <img src={unLikedFavorite} alt="not a favorites" />}
+                <img className={s.btnFavorite__icon} src={likedFavorite} alt="favorite" /> :
+                <img className={s.btnFavorite__icon} src={unLikedFavorite} alt="not a favorites" />}
     </div>)
 
 }

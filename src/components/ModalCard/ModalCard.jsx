@@ -9,21 +9,21 @@ export default function ModalCard({car, isOpen, closeModal}) {
   if (isOpen) {
     conditionsOptions = car.rentalConditions.split('\n');
     modifieDescr = [...car.address.split(', '), `Id: ${car.id}`, `Year: ${car.year}`, `Type: ${car.type}`, `Fuel Consumption: ${car.fuelConsumption}`, `Engine Size: ${car.engineSize}`];
-    console.log(modifieDescr)
   }
+  
   
 
   return (
     <div>
       
       {isOpen && (
-        <div className={s.modalBackdrop} >
+        <div className={s.modalBackdrop} onClick={closeModal} >
           <div className={s.modalContent}>
              <AiOutlineClose className={s.closeBtn} onClick={closeModal}/>
             
             
             <div className={s.modalCard__imgContainer}>
-              <img src={car.img} alt="#" className={s.modalCard__img}/>
+              <img src={car.img} alt={car.make} className={s.modalCard__img}/>
             </div>
 
              <div className={s.modalCard__decrBox}>

@@ -25,9 +25,6 @@ export default function CatalogPage() {
       let newFav = favorites.filter((fav) => fav.id !== car.id);
       setFavorites([...newFav]);
     }
-      
-    //  localStorage.setItem('ITEM', JSON.stringify(favorites));
-    console.log(favorites)
   };
 
   useEffect(() => {
@@ -43,7 +40,6 @@ export default function CatalogPage() {
 
     useEffect(() => {
      const favorite = JSON.parse(localStorage.getItem('ITEM'));
-        console.log(favorite)
 		if (favorite) {
 			setFavorites([...favorite]);
     }
@@ -56,7 +52,6 @@ export default function CatalogPage() {
         try {
           const response = await fetchCars(page);
           response && setCars(prev => { return [...prev, ...response]; });
-          console.log(response)
            response && response.length < 8 && setShowLoadMoreBtn(false);
         } catch (e) {
           setError(e.message);
