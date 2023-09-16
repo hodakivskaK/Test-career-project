@@ -8,11 +8,11 @@ import LoadMore from 'components/LoadMore/LoadMore';
 
 import s from './Catalog.module.css'
 
-export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite, favoriteIcon}) {
+export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite, favorites}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCar, setIsCurrentCar] = useState([]);
 
-  const [favoriteIcona, setFavoriteIcona] = useState(false);
+    // const [favoriteIcon, setFavoriteIcon] = useState(false);
   
   const openModal = (car) => {
     setIsCurrentCar(car)
@@ -57,7 +57,7 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite
         return <div key={car.id} className={s.catalog__card }>
           
           <img src={car.img} alt={car.make} className={s.catalog__img} />
-          <BtnFavorite car={car} addFavorite={addFavorite} favoriteIcon={favoriteIcon} />
+          <BtnFavorite car={car} addFavorite={addFavorite} favorites={favorites} />
               <div className={s.catalog__decrBox}>
                 <p className={s.catalog__decr}>{car.make} 
                 <span className={s.catalog__decrAccent}> {car.model}, </span>

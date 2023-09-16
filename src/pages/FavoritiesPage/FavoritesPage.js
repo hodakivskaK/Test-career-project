@@ -8,16 +8,40 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export default function FavoritesPage(){
-  const [favorites, setFavorite] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+
+  const addFavorite = (car) => {
+    if (!favorites.map(favorite => favorite.id).includes(car.id)) {
+      setFavorites([...favorites, car]);
+     
+    }
+
+    if (favorites.map(favorite => favorite.id).includes(car.id)) {
+      let newFav = favorites.filter((fav) => fav.id !== car.id);
+      setFavorites([...newFav]);
+    }
+      
+      localStorage.setItem('ITEM', JSON.stringify(favorites));
+  };
+
 
  useEffect(() => {
      const favorite = JSON.parse(localStorage.getItem('ITEM'));
    
 		if (favorite) {
-			setFavorite(favorite);
+			setFavorites(favorite);
     }
-     console.log(favorites)
-  }, []);
+ }, []);
+  
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+       localStorage.setItem('ITEM', JSON.stringify(favorites));
+    }, 100);
+    return () => clearTimeout(timer);
+        
+  },);
+  
   
 return (
      <>
@@ -30,7 +54,7 @@ return (
            <p className={s.favoritesPage_empty}>You don't have any favorite cars <br/>
         Look at <Link to="/catalog" className={s.favoritesPage__link}>Catalog</Link>
         </p></div>:
-        <Catalog catalog={favorites} />}
+        <Catalog catalog={favorites} addFavorite={addFavorite} favorites={favorites} />}
       </section>
     </>
   );

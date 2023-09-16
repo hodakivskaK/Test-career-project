@@ -17,7 +17,7 @@ export default function ModalCard({car, isOpen, closeModal}) {
     <div>
       
       {isOpen && (
-        <div className={s.modalBackdrop}>
+        <div className={s.modalBackdrop} >
           <div className={s.modalContent}>
              <AiOutlineClose className={s.closeBtn} onClick={closeModal}/>
             

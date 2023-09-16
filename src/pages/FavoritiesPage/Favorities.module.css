@@ -1,6 +1,8 @@
 .favoritesPage_empty {
-  font-size: 20px;
+  font-size: 25px;
   color: #3470ff;
+  text-align: center;
+  margin-top: 22vh;
 }
 
 .favoritesPage__link {
