@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
 import ModalCard from 'components/ModalCard/ModalCard';
@@ -6,7 +7,7 @@ import LoadMore from 'components/LoadMore/LoadMore';
 
 import s from './Catalog.module.css'
 
-export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite, favorites}) {
+export default function Catalog({onClick, showLoadMoreBtn, catalog, addFavorite, favorites}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCar, setIsCurrentCar] = useState([]);
   
@@ -74,3 +75,13 @@ export default function Catalog({onClick, showLoadMoreBtn, catalog , addFavorite
     </div>
   );
 }
+
+
+
+Catalog.propTypes = {
+  onClick: PropTypes.func,
+  showLoadMoreBtn: PropTypes.bool,
+  catalog: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

@@ -11,7 +11,7 @@ export default function Filter() {
     <div >
       <form className={s.filter__form}>
       
-        <label className={s.filter__label}>
+        <label className={s.filter__wrappers}>
         <p>Car brand</p> 
       <Select
     
@@ -24,7 +24,7 @@ export default function Filter() {
       />
       </label>
         
-        <label className={s.filter__label}>
+        <label className={s.filter__wrappers}>
          <p>Price/ 1 hour</p> 
           <Select
             className="basic-single"
@@ -35,16 +35,28 @@ export default function Filter() {
               />
         </label>
 
-         <label className={s.filter__label}>
+         <div className={s.filter__wrappers}>
           <p>Сar mileage / km</p> 
-        <div className={s.filter__input}>
-          <input type="text" name="millageFrom" placeholder="From" className={s.filter__inputFrom}/>
-          <input type="text" name="millageTo" placeholder="To" className={s.filter__inputTo}/>
+         <div className={s.filter__milageInputs}>
+            <div className={s.filter__div}>
+            <label className={s.filter__testLabel}> From </label>
+              <input type="text" placeholder='' name="millageFrom" className={s.filter__testInput}/>
+            </div>
+
+              <div className={s.filter__div}>
+            <label className={s.filter__testLabel}> To </label>
+              <input type="text" name="millageTo" placeholder='' className={s.filter__testInput}/>
+            </div>
+      </div>
         </div>
-        </label>
         
         <button className={s.filter__btnSubmit}>Search</button>
-        </form>
+
+      
+
+      </form>
+      
+     
     </div>
   );
 }

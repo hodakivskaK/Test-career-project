@@ -1,7 +1,8 @@
 
+import PropTypes from 'prop-types';
 import s from './btnFavorite.module.css'
-import likedFavorite from '../../image/BtnFavorite/likedFavorite.png'
-import unLikedFavorite from '../../image/BtnFavorite/unLikedFavorite.png'
+import likedFavorite from '../../image/BtnFavorite/active.svg'
+import unLikedFavorite from '../../image/BtnFavorite/normal.svg'
 
 import { useState, useEffect } from 'react';
 
@@ -17,7 +18,6 @@ export default function BtnFavorite({ car, addFavorite, favorites }) {
     }
   }, [favorites, car.id]);
 
-
     return (
         <div className={s.btnFavorite} onClick={() =>  addFavorite(car)} >
             {favoriteIcon ?
@@ -26,3 +26,9 @@ export default function BtnFavorite({ car, addFavorite, favorites }) {
     </div>)
 
 }
+
+BtnFavorite.propTypes = {
+car: PropTypes.object.isRequired,
+addFavorite: PropTypes.func.isRequired,
+favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

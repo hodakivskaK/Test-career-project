@@ -20,11 +20,11 @@ export const brandsStyles = {
     ...styles,
     outline: 'none',
     boxShadow: 'none',
-    borderWidth: '1px',
+    border: 'none',
     borderRadius: '14px',
 
     transition: "0.2s",
-    backgroundColor: '#1214170D',
+    backgroundColor: '#F7F7FB',
     color: '#121417',
       width: '224px',
       height: '48px',
@@ -103,19 +103,15 @@ export const priceStyles = {
     borderRadius: '14px',
 
     transition: "0.2s",
-    backgroundColor: '#1214170D',
+    backgroundColor: '#F7F7FB',
     color: '#121417',
       width: '130px',
       height: '48px',
 
     '&:hover': {
-      border: "1px solid",
-      borderColor: '#0b44cd',
       boxShadow: 'none',
     },
     '&:focus': {
-      borderWidth: "1px",
-      borderColor: '#0b44cd',
       boxShadow: 'none',
     },
   }),

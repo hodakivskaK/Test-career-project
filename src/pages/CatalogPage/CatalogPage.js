@@ -72,7 +72,7 @@ export default function CatalogPage() {
   return (
   error? <h2 className={s.errorMistake}>Something wrong, please refresh a page</h2> :
     <div>
-      <AppBar /> 
+          <AppBar page={"Catalog"} />
     <section>
           <Filter />
           <Catalog onClick={() => setPage(prev => prev + 1)} showLoadMoreBtn={showLoadMoreBtn} catalog={cars} addFavorite={addFavorite} favorites={favorites} />

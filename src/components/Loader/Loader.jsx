@@ -1,10 +1,9 @@
 import { TailSpin } from  'react-loader-spinner'
-import sas from './Loader.module.css'
+import s from './Loader.module.css'
 
 export default function Loader() {
     return (
-    <div className={sas.loader}>
-   
+    <div className={s.loader}>
             <TailSpin
             height="90"
             width="90"

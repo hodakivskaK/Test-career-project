@@ -9,40 +9,14 @@
   margin-bottom: 40px;
 }
 
-input {
-  width: 160px;
-  height: 48px;
-  background-color: #c0c0c033;
-
-  padding: 0 24px;
-  border: none;
-  transition: 0.2s;
-  outline: transparent;
-}
-
-input:focus {
-  border: 1px solid #0b44cd;
-}
-
-.filter__inputFrom {
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-right: 1px solid #8a8a8933;
-}
-
-.filter__inputTo {
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-.filter__label {
+.filter__wrappers {
   font-size: 14px;
   font-weight: 500;
   line-height: calc(18 / 14);
   color: #8a8a89;
 }
 
-.filter__label p {
+.filter__wrappers p {
   margin-bottom: 8px;
 }
 
@@ -59,4 +33,65 @@ input:focus {
 
 .filter__btnSubmit:hover {
   background-color: #0b44cd;
+}
+
+.filter__milageInputs {
+  display: flex;
+}
+
+.filter__div {
+  box-sizing: content-box;
+  position: relative;
+  width: 160px;
+}
+
+.filter__testLabel {
+  position: absolute;
+  top: 15px;
+  left: 24px;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(20 / 18);
+  color: #000000;
+  opacity: 1;
+}
+
+.filter__testInput {
+  padding: 0 0 0 74px;
+  background-color: #c0c0c033;
+  height: 48px;
+  width: 86px;
+  border: none;
+  transition: 0.2s;
+  outline: transparent;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(20 / 18);
+  color: #000000;
+  opacity: 1;
+}
+
+.filter__testInput::placeholder {
+  padding: 0 0 0 74px;
+}
+
+.filter__testInput {
+  background-color: transparent;
+}
+
+.filter__div:nth-child(1) {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  background-color: #f7f7fb;
+  border-right: 1px solid #8a8a8933;
+}
+
+.filter__div:nth-child(2) {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background-color: #f7f7fb;
 }

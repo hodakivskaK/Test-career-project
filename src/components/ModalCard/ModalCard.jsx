@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import s from './ModalCard.module.css'
 import {AiOutlineClose} from 'react-icons/ai';
 import { nanoid } from '@reduxjs/toolkit';
@@ -63,3 +65,14 @@ export default function ModalCard({car, isOpen, closeModal}) {
     </div>
   );
 }
+
+
+ModalCard.propTypes = {
+  car:PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]), 
+  isOpen: PropTypes.bool.isRequired,
+  closeModal: PropTypes.func.isRequired,
+};
+

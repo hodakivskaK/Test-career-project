@@ -1,4 +1,4 @@
-.AppBar__header {
+.appBar__header {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +10,7 @@
   z-index: 99;
 }
 
-.AppBar__wrapper {
+.appBar__wrapper {
   box-sizing: border-box;
   max-width: 1184px;
   margin: 0 auto;
@@ -21,7 +21,7 @@
   justify-content: space-between;
 }
 
-.AppBar__logoBox {
+.appBar__logoBox {
   display: flex;
   gap: 6px;
 
@@ -32,11 +32,11 @@
   border-radius: 14px;
 }
 
-.AppBar__logoTitle {
+.appBar__logoTitle {
   font-weight: 600;
 }
 
-.AppBar__link {
+.appBar__link {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -46,6 +46,6 @@
   transition: 0.3s;
 }
 
-.AppBar__link:hover {
+.appBar__link:hover {
   color: #0b44cd;
 }

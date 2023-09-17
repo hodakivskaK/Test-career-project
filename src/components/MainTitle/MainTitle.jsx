@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './MainTitle.module.css'
 
 export default function MainTitle({title}){
@@ -6,3 +7,7 @@ return (
   );
   
 }
+
+MainTitle.propTypes = {
+title: PropTypes.string.isRequired,
+};

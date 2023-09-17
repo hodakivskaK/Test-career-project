@@ -1,22 +1,29 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import s from './AppBar.module.css'
+
 import { BsCarFront } from 'react-icons/bs';
 
-export default function AppBar({page}) {
-  
-return (
-    <header className={s.AppBar__header}>
-        <div className={s.AppBar__wrapper}>
+import s from './AppBar.module.css'
 
-        <div className={s.AppBar__logoBox}>
-                <p className={s.AppBar__logoTitle}> Rental car </p>
-                <BsCarFront className={s.AppBar__logoIcon} />
+export default function AppBar({page}) {
+return (
+    <header className={s.appBar__header}>
+        <div className={s.appBar__wrapper}>
+
+        <div className={s.appBar__logoBox}>
+                <p className={s.appBar__logoTitle}>Rental car</p>
+                <BsCarFront className={s.appBar__logoIcon} />
         </div>
             
         {page === "favorite" ?
-            <Link to="/catalog" className={s.AppBar__link}>Catalog</Link>:
-            <Link to="/favorite" className={s.AppBar__link}>Favorites</Link>}
+            <Link to="/catalog" className={s.appBar__link}>Catalog</Link>:
+            <Link to="/favorite" className={s.appBar__link}>Favorites</Link>}
         </div>
     </header>
   );
 }
+
+
+AppBar.propTypes = {
+  page: PropTypes.string.isRequired,
+};
