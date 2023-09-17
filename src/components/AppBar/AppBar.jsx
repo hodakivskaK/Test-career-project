@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import { BsCarFront } from 'react-icons/bs';
+import unLikedFavorite from '../../image/BtnFavorite/active.svg'
 
 import s from './AppBar.module.css'
 
@@ -17,7 +18,7 @@ return (
             
         {page === "favorite" ?
             <Link to="/catalog" className={s.appBar__link}>Catalog</Link>:
-            <Link to="/favorite" className={s.appBar__link}>Favorites</Link>}
+            <Link to="/favorite" className={s.appBar__link}>Favorites <img className={s.appBar__icon} src={unLikedFavorite} alt="favorites" /></Link> }
         </div>
     </header>
   );
