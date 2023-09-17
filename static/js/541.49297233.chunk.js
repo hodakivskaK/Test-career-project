@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkTest_career_project=self.webpackChunkTest_career_project||[]).push([[541],{1541:function(e,a,r){r.r(a),r.d(a,{default:function(){return _}});var c=r(1087),o="HomePage_home_box__4X2Gk",t="HomePage_home_title__BBwtD",s="HomePage_home_link__hbQXC",n=r(184);function _(){return(0,n.jsxs)("div",{className:o,children:[(0,n.jsx)("h1",{className:t,children:"Looking for a car to rent? Easy way for searching "}),(0,n.jsx)(c.rU,{to:"/catalog",className:s,children:"See a catalog "})]})}}}]);
+//# sourceMappingURL=541.49297233.chunk.js.map
