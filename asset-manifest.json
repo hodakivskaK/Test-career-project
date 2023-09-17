@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/Test-career-project/static/css/main.34c1cbc1.css",
-    "main.js": "/Test-career-project/static/js/main.34bc63bf.js",
+    "main.css": "/Test-career-project/static/css/main.91243916.css",
+    "main.js": "/Test-career-project/static/js/main.cece0dd6.js",
     "static/css/541.054c0f4f.chunk.css": "/Test-career-project/static/css/541.054c0f4f.chunk.css",
     "static/js/541.fbf0f928.chunk.js": "/Test-career-project/static/js/541.fbf0f928.chunk.js",
-    "static/css/594.e57d42f1.chunk.css": "/Test-career-project/static/css/594.e57d42f1.chunk.css",
+    "static/css/594.f7e2ea2c.chunk.css": "/Test-career-project/static/css/594.f7e2ea2c.chunk.css",
     "static/js/594.e4bd9a86.chunk.js": "/Test-career-project/static/js/594.e4bd9a86.chunk.js",
-    "static/css/637.248aff0a.chunk.css": "/Test-career-project/static/css/637.248aff0a.chunk.css",
+    "static/css/637.fc915ee1.chunk.css": "/Test-career-project/static/css/637.fc915ee1.chunk.css",
     "static/js/637.5b50a578.chunk.js": "/Test-career-project/static/js/637.5b50a578.chunk.js",
     "static/js/450.7f90ea7e.chunk.js": "/Test-career-project/static/js/450.7f90ea7e.chunk.js",
     "static/js/304.368999d6.chunk.js": "/Test-career-project/static/js/304.368999d6.chunk.js",
     "index.html": "/Test-career-project/index.html",
     "static/media/normal.svg": "/Test-career-project/static/media/normal.282d936f414f4c6884ab9306a91dad67.svg",
     "static/media/active.svg": "/Test-career-project/static/media/active.97847e9195943f61800c97807e735d4f.svg",
-    "main.34c1cbc1.css.map": "/Test-career-project/static/css/main.34c1cbc1.css.map",
-    "main.34bc63bf.js.map": "/Test-career-project/static/js/main.34bc63bf.js.map",
+    "main.91243916.css.map": "/Test-career-project/static/css/main.91243916.css.map",
+    "main.cece0dd6.js.map": "/Test-career-project/static/js/main.cece0dd6.js.map",
     "541.054c0f4f.chunk.css.map": "/Test-career-project/static/css/541.054c0f4f.chunk.css.map",
     "541.fbf0f928.chunk.js.map": "/Test-career-project/static/js/541.fbf0f928.chunk.js.map",
-    "594.e57d42f1.chunk.css.map": "/Test-career-project/static/css/594.e57d42f1.chunk.css.map",
+    "594.f7e2ea2c.chunk.css.map": "/Test-career-project/static/css/594.f7e2ea2c.chunk.css.map",
     "594.e4bd9a86.chunk.js.map": "/Test-career-project/static/js/594.e4bd9a86.chunk.js.map",
-    "637.248aff0a.chunk.css.map": "/Test-career-project/static/css/637.248aff0a.chunk.css.map",
+    "637.fc915ee1.chunk.css.map": "/Test-career-project/static/css/637.fc915ee1.chunk.css.map",
     "637.5b50a578.chunk.js.map": "/Test-career-project/static/js/637.5b50a578.chunk.js.map",
     "450.7f90ea7e.chunk.js.map": "/Test-career-project/static/js/450.7f90ea7e.chunk.js.map",
     "304.368999d6.chunk.js.map": "/Test-career-project/static/js/304.368999d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34c1cbc1.css",
-    "static/js/main.34bc63bf.js"
+    "static/css/main.91243916.css",
+    "static/js/main.cece0dd6.js"
   ]
 }
