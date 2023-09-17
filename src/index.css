@@ -35,3 +35,19 @@ button:focus {
 section {
   margin: 120px 0 150px 0;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 80%;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3471ffbc;
+  transition: 0.3s;
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3470ff;
+  /* border-radius: 50%; */
+}
